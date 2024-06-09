@@ -1,0 +1,6 @@
+<!-- Base application theme. -->
+<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- Customize your theme here. -->
+    <!-- 设置状态栏颜色为灰色 -->
+    <item name="android:statusBarColor">@color/gray</item>
+</style>
