@@ -25,6 +25,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -45,6 +46,7 @@ import java.util.Map;
 public class AddActivity extends AppCompatActivity {
     private LinearLayout shot;
     private TextView accept;
+    private EditText detail;
     private Bitmap bmp;
     private RelativeLayout photoContent;
     private String img;
@@ -73,6 +75,7 @@ public class AddActivity extends AppCompatActivity {
         shot = findViewById(R.id.shot);
         photoContent = findViewById(R.id.content_photo);
         accept = findViewById(R.id.accept);
+        detail = findViewById(R.id.detail_edit);
         shot.setOnClickListener(this::Album);
         accept.setOnClickListener(this::upload);
     }
@@ -129,7 +132,7 @@ public class AddActivity extends AppCompatActivity {
                 JsonObject jsonObject = new JsonObject();
                 jsonObject.addProperty("data",img);
                 jsonObject.addProperty("albumId",album_id);
-
+                jsonObject.addProperty("comment",detail.getText().toString());
                 networkClient.fetchData(url+"/api/photos/create", jsonObject.toString(), new NetworkClient.NetworkCallback() {
                     @Override
                     public void onSuccess(final String response) {

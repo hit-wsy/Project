@@ -27,13 +27,13 @@
             android:textSize="14dp"
             android:textColor="@color/black"/>
 
-<!--        <TextView-->
-<!--            android:id="@+id/num"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="24"-->
-<!--            android:textSize="12dp"-->
-<!--            android:textColor="@color/gray"/>-->
+        <TextView
+            android:id="@+id/num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24"
+            android:textSize="12dp"
+            android:textColor="@color/gray"/>
 
     </LinearLayout>
 

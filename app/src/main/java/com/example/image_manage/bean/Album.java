@@ -3,8 +3,8 @@ package com.example.image_manage.bean;
 public class Album {
     private int id;
     private String albumName;
-    private int firstP;
-    private int pnum;
+    private String firstP;
+    private int pNum;
 
     public int getId() {
         return id;
@@ -22,19 +22,19 @@ public class Album {
         this.albumName = albumName;
     }
 
-    public int getFirstP() {
+    public String getFirstP() {
         return firstP;
     }
 
-    public void setFirstP(int firstP) {
+    public void setFirstP(String firstP) {
         this.firstP = firstP;
     }
 
-    public int getPnum() {
-        return pnum;
+    public int getpNum() {
+        return pNum;
     }
 
-    public void setPnum(int pnum) {
-        this.pnum = pnum;
+    public void setpNum(int pNum) {
+        this.pNum = pNum;
     }
 }
